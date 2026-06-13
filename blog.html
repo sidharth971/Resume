@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical articles and insights on Python backend engineering, GenAI, agentic RAG systems, and cloud deployments by Sidharth Sahoo.">
+  <meta property="og:title" content="Blog | Sidharth Sahoo">
+  <meta property="og:description" content="Technical articles and insights on Python backend engineering, GenAI, agentic RAG systems, and cloud deployments by Sidharth Sahoo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/sidharth971/blog.html">
+  <meta property="og:site_name" content="Sidharth Sahoo Portfolio">
+  <title>Blog | Sidharth Sahoo</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Theme Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Accessibility Skip-to-content link -->
+  <a href="#blog-main" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header scrolled"> <!-- Kept permanent scrolled state for subpages -->
+    <div class="container nav-container">
+      <div class="logo-avatar-container">
+        <div class="avatar-uploader" aria-label="Upload profile photo">
+          <img id="header-avatar-img" class="avatar-img" src="" alt="Sidharth Sahoo Profile" style="display: none;">
+          <div id="header-avatar-placeholder" class="avatar-placeholder">SS</div>
+          <div class="avatar-overlay">
+            <i class="fas fa-camera"></i>
+          </div>
+          <input type="file" id="header-avatar-input" accept="image/*" style="display: none;">
+        </div>
+        <a href="index.html" class="logo" aria-label="Sidharth Sahoo Portfolio Logo">SS</a>
+      </div>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+          <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="right-nav-group">
+        <div class="badge available-badge" aria-label="Availability Status">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          <span>Available for work</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="blog-main">
+    
+    <!-- BLOG HERO SECTION -->
+    <section class="blog-hero">
+      <div class="container">
+        <h1>Articles & Insights</h1>
+        <p class="section-subtitle" style="margin-bottom: 0;">Writing about Python performance, agentic RAG architecture, DevOps pipelines, and database tuning.</p>
+        
+        <!-- Search and Tag Filter Bar -->
+        <div class="filter-wrapper">
+          <div class="search-container">
+            <span class="search-icon"><i class="fas fa-search" aria-hidden="true"></i></span>
+            <input type="text" id="search-input" class="search-input" placeholder="Search articles by title, tags, or content..." aria-label="Search articles">
+          </div>
+
+          <div class="tags-filter-container">
+            <span class="filter-label">Filter by Tag:</span>
+            <div class="filter-tags-list" id="filter-tags-list" role="group" aria-label="Tag filters">
+              <!-- Dynamically populated tags buttons by blog.js -->
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">Loading tags...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG CARDS LISTING -->
+    <section class="section" style="border-bottom: none;">
+      <div class="container">
+        <div class="blog-grid grid" id="blog-list-grid">
+          <!-- Dynamic cards rendered by blog.js from blog-data.js -->
+          <div class="empty-state grid-colspan-all">
+            <p>Loading articles grid...</p>
+          </div>
+        </div>
+
+        <!-- PAGINATION CONTROLS -->
+        <div class="pagination" id="pagination" role="navigation" aria-label="Pagination Navigation">
+          <!-- Dynamic pagination buttons rendered by blog.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; 2026 Sidharth Sahoo. All rights reserved.
+      </div>
+      
+      <div class="footer-links">
+        <a href="https://github.com/sidharth971" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sidharth-973" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:sidharth.backend@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" aria-label="Scroll back to top of the page">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Core Scripts -->
+  <script src="js/blog-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

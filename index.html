@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sidharth Sahoo, Software Engineer specializing in Python backends, Django, FastAPI, GenAI, and RAG pipelines.">
+  <meta property="og:title" content="Sidharth Sahoo | Software Engineer & GenAI Developer">
+  <meta property="og:description" content="Portfolio of Sidharth Sahoo, Software Engineer specializing in Python backends, Django, FastAPI, GenAI, and RAG pipelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/sidharth971">
+  <meta property="og:site_name" content="Sidharth Sahoo Portfolio">
+  <title>Sidharth Sahoo | Software Engineer & GenAI Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Theme Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JSON-LD Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sidharth Sahoo",
+    "jobTitle": "Software Engineer",
+    "email": "sidharth.backend@gmail.com",
+    "telephone": "+918895825688",
+    "url": "https://github.com/sidharth971",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/sidharth971",
+      "https://linkedin.com/in/sidharth-973"
+    ],
+    "knowsAbout": [
+      "Python",
+      "Django",
+      "FastAPI",
+      "Generative AI",
+      "Retrieval-Augmented Generation (RAG)",
+      "PGVector",
+      "AWS Bedrock",
+      "Docker",
+      "Jenkins",
+      "PostgreSQL"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Aumovio"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "BPUT Bhubaneswar"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessibility Skip-to-content link -->
+  <a href="#about" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo-avatar-container">
+        <div class="avatar-uploader" aria-label="Upload profile photo">
+          <img id="header-avatar-img" class="avatar-img" src="" alt="Sidharth Sahoo Profile" style="display: none;">
+          <div id="header-avatar-placeholder" class="avatar-placeholder">SS</div>
+          <div class="avatar-overlay">
+            <i class="fas fa-camera"></i>
+          </div>
+          <input type="file" id="header-avatar-input" accept="image/*" style="display: none;">
+        </div>
+        <a href="index.html" class="logo" aria-label="Sidharth Sahoo Portfolio Logo">SS</a>
+      </div>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="right-nav-group">
+        <div class="badge available-badge" aria-label="Availability Status">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          <span>Available for work</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- HERO SECTION -->
+    <section class="hero section" id="about">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <span class="hero-eyebrow">Hello, I'm</span>
+          <h1 class="hero-title">Sidharth Sahoo</h1>
+          
+          <div class="typing-container" aria-label="Role Description">
+            <span class="typing-prefix">Specializing in &nbsp;</span>
+            <span class="typing-text-wrapper">
+              <span id="type-text"></span><span class="typing-cursor" aria-hidden="true"></span>
+            </span>
+          </div>
+
+          <p class="hero-desc">
+            4+ years building Python backends and GenAI applications. Currently @ Aumovio, building agentic RAG pipelines on AWS Bedrock.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="https://github.com/sidharth971" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download Resume</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/sidharth971" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/sidharth-973" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:sidharth.backend@gmail.com" class="social-icon" aria-label="Send Email">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="terminal-wrapper reveal-on-scroll" aria-hidden="true">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="t-btn t-close"></span>
+                <span class="t-btn t-min"></span>
+                <span class="t-btn t-max"></span>
+              </div>
+              <div class="terminal-title">agentic_rag.py</div>
+            </div>
+            <div class="terminal-body"><span class="t-comment"># Ingestion & Reasoning Engine</span>
+<span class="t-keyword">from</span> langgraph.graph <span class="t-keyword">import</span> StateGraph
+<span class="t-keyword">from</span> langchain_community <span class="t-keyword">import</span> PGVector
+<span class="t-keyword">from</span> aws_bedrock <span class="t-keyword">import</span> BedrockLLM
+
+<span class="t-comment"># Define Agentic routing state</span>
+<span class="t-keyword">class</span> <span class="t-func">AgentState</span>(TypedDict):
+    query: str
+    context: list
+
+<span class="t-comment"># Load vector index and set up graph</span>
+db = PGVector(collection=<span class="t-str">"embeddings"</span>)
+llm = BedrockLLM(model_id=<span class="t-str">"claude-3.5-sonnet"</span>)
+
+workflow = StateGraph(AgentState)
+workflow.add_node(<span class="t-str">"retrieve"</span>, db.similarity_search)
+workflow.add_node(<span class="t-str">"reason"</span>, llm.invoke)
+
+workflow.set_entry_point(<span class="t-str">"retrieve"</span>)
+workflow.add_edge(<span class="t-str">"retrieve"</span>, <span class="t-str">"reason"</span>)
+
+rag_agent = workflow.compile()
+print(<span class="t-str">"[✓] Agent loaded. Ready to serve."</span>)
+
+<span class="t-prompt">$</span> python agentic_rag.py
+[✓] Agent loaded. Ready to serve.
+<span class="t-prompt">$</span> <span class="t-num">_</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">A chronological record of my professional engineering career.</p>
+
+        <div class="experience-timeline">
+          
+          <!-- Role 1 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-card">
+              <div class="timeline-header-info">
+                <h3 class="role-title">Technical Specialist</h3>
+                <div class="company-meta">
+                  <span>Aumovio</span>
+                  <span>Sep 2025 – Present</span>
+                  <span>Bangalore</span>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Designed and deployed FastAPI services for GenAI applications, achieving robust performance under heavy load.</li>
+                <li>Architected agentic RAG pipelines with PGVector for embedding storage, yielding a 32% increase in retrieval accuracy.</li>
+                <li>Managed model deployment and load balancing on AWS Bedrock using Anthropic Claude models.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-card">
+              <div class="timeline-header-info">
+                <h3 class="role-title">Technical Specialist</h3>
+                <div class="company-meta">
+                  <span>Continental Auto Mobility IND</span>
+                  <span>Dec 2021 – Sep 2025</span>
+                  <span>Bengaluru</span>
+                </div>
+              </div>
+              <ul class="timeline-details">
+                <li>Developed full-stack features using Python, Django, Flask, FastAPI, and React in an agile environment.</li>
+                <li>Designed relational schemas for PostgreSQL and MySQL, orchestrating containerized workloads in Docker.</li>
+                <li>Achieved 95% accuracy in complex data validation operations via rigorous automated unit testing structures.</li>
+                <li>Engineered custom Jenkins CI/CD pipelines to AWS ECS/EC2, reducing deployment times by 40%.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A select showcase of engineering systems I have built and maintained.</p>
+
+        <div class="projects-grid grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">MAIA - AI4testing</h3>
+                <span class="project-date">Jan 2025 – Present</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-badge tech-python">Python</span>
+                <span class="tech-badge tech-generic">Langchain</span>
+                <span class="tech-badge tech-generic">PGvector</span>
+                <span class="tech-badge tech-generic">Agentic AI</span>
+                <span class="tech-badge tech-generic">MCP</span>
+                <span class="tech-badge tech-aws">AWS</span>
+                <span class="tech-badge tech-react">React</span>
+              </div>
+              <p class="project-desc">
+                Generative AI tool that automates test case and script creation from user-uploaded requirements.
+              </p>
+              <div class="project-footer">
+                View Details <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Sparcs - Project Tracking</h3>
+                <span class="project-date">Dec 2021 – Oct 2025</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-badge tech-python">Python</span>
+                <span class="tech-badge tech-django">Django</span>
+                <span class="tech-badge tech-generic">FastAPI</span>
+                <span class="tech-badge tech-generic">MySQL</span>
+                <span class="tech-badge tech-generic">PostgreSQL</span>
+                <span class="tech-badge tech-aws">AWS</span>
+                <span class="tech-badge tech-generic">ETL</span>
+                <span class="tech-badge tech-generic">Jenkins</span>
+                <span class="tech-badge tech-generic">Docker</span>
+              </div>
+              <p class="project-desc">
+                Sophisticated project tracking system for managing and visualizing all project-related data with automated AWS deployments.
+              </p>
+              <div class="project-footer">
+                View Details <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">EMPTransfer - HR Tracking</h3>
+                <span class="project-date">Aug 2022 – May 2023</span>
+              </div>
+              <div class="project-tags">
+                <span class="tech-badge tech-python">Python</span>
+                <span class="tech-badge tech-generic">FastAPI</span>
+                <span class="tech-badge tech-generic">MySQL</span>
+                <span class="tech-badge tech-react">React</span>
+                <span class="tech-badge tech-generic">Jenkins</span>
+                <span class="tech-badge tech-generic">Docker</span>
+                <span class="tech-badge tech-aws">AWS</span>
+              </div>
+              <p class="project-desc">
+                Django-based HR tool streamlining employee transfer workflows with secure auth and automated induction.
+              </p>
+              <div class="project-footer">
+                View Details <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">My primary technological toolkit and professional accolades.</p>
+
+        <div class="skills-grid grid">
+          
+          <!-- Skill Groups -->
+          <div class="skills-left reveal-on-scroll">
+            
+            <div class="skills-category">
+              <h3 class="skills-category-title">Python Ecosystem</h3>
+              <div class="skills-chips">
+                <span class="skill-chip"><i class="fab fa-python skill-icon"></i> Django</span>
+                <span class="skill-chip"><i class="fab fa-python skill-icon"></i> Flask</span>
+                <span class="skill-chip"><i class="fab fa-python skill-icon"></i> FastAPI</span>
+                <span class="skill-chip"><i class="fas fa-robot skill-icon"></i> Automation</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 class="skills-category-title">GenAI & RAG</h3>
+              <div class="skills-chips">
+                <span class="skill-chip"><i class="fas fa-brain skill-icon"></i> Langchain</span>
+                <span class="skill-chip"><i class="fas fa-database skill-icon"></i> PGvector</span>
+                <span class="skill-chip"><i class="fas fa-cloud skill-icon"></i> AWS Bedrock</span>
+                <span class="skill-chip"><i class="fas fa-network-wired skill-icon"></i> Agentic AI</span>
+                <span class="skill-chip"><i class="fas fa-plug skill-icon"></i> MCP</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 class="skills-category-title">Cloud & DevOps</h3>
+              <div class="skills-chips">
+                <span class="skill-chip"><i class="fab fa-aws skill-icon"></i> AWS Solutions Architect</span>
+                <span class="skill-chip"><i class="fab fa-docker skill-icon"></i> Docker</span>
+                <span class="skill-chip"><i class="fab fa-jenkins skill-icon"></i> Jenkins</span>
+                <span class="skill-chip"><i class="fas fa-cubes skill-icon"></i> Kubernetes (K8s)</span>
+                <span class="skill-chip"><i class="fas fa-server skill-icon"></i> Terraform</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 class="skills-category-title">Data Engineering</h3>
+              <div class="skills-chips">
+                <span class="skill-chip"><i class="fas fa-share-alt skill-icon"></i> Data Pipelines</span>
+                <span class="skill-chip"><i class="fas fa-filter skill-icon"></i> ETL</span>
+                <span class="skill-chip"><i class="fas fa-database skill-icon"></i> SQL</span>
+                <span class="skill-chip"><i class="fas fa-database skill-icon"></i> PostgreSQL</span>
+                <span class="skill-chip"><i class="fas fa-database skill-icon"></i> MySQL</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 class="skills-category-title">Frontend</h3>
+              <div class="skills-chips">
+                <span class="skill-chip"><i class="fab fa-react skill-icon"></i> React</span>
+                <span class="skill-chip"><i class="fab fa-html5 skill-icon"></i> HTML5</span>
+                <span class="skill-chip"><i class="fab fa-css3-alt skill-icon"></i> CSS3</span>
+                <span class="skill-chip"><i class="fab fa-js skill-icon"></i> JavaScript</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Certifications & Awards -->
+          <div class="skills-right reveal-on-scroll">
+            
+            <div class="badge-card">
+              <div class="badge-icon" aria-hidden="true">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div>
+                <h3 class="badge-title">Certified Generative AI For Business Lead</h3>
+                <span class="badge-issuer">Issued: 2023</span>
+                <p class="badge-desc">Expertise in deploying and scaling commercial generative models for operational applications.</p>
+              </div>
+            </div>
+
+            <div class="badge-card">
+              <div class="badge-icon" aria-hidden="true">
+                <i class="fas fa-award"></i>
+              </div>
+              <div>
+                <h3 class="badge-title">Clapas Point</h3>
+                <span class="badge-issuer">Aumovio · Dec 2025</span>
+                <p class="badge-desc">Awarded for outstanding engineering efforts in building agentic systems and accelerating development outputs.</p>
+              </div>
+            </div>
+
+            <div class="badge-card" style="margin-top: auto;">
+              <div class="badge-icon" aria-hidden="true">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h3 class="badge-title">B.Tech in Engineering</h3>
+                <span class="badge-issuer">BPUT Bhubaneswar (Odisha)</span>
+                <p class="badge-desc">Academics in Computer Science and Engineering with a final GPA of 7.1.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section" id="blog">
+      <div class="container">
+        
+        <div class="blog-header">
+          <div>
+            <h2 class="section-title">Latest Articles</h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">Sharing my insights on Python backends, GenAI, and cloud architecture.</p>
+          </div>
+          <a href="blog.html" class="btn btn-outline">View all posts &rarr;</a>
+        </div>
+
+        <div class="blog-grid grid" id="homepage-blog-grid">
+          <!-- Dynamic cards rendered by index.js from blog-data.js -->
+          <div class="empty-state grid-colspan-all">
+            <p>Loading articles...</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center; display: block; margin-bottom: 1rem;">Let's build something together</h2>
+        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 3rem;">
+          Have a question or looking to collaborate? Reach out through any of these platforms or fill out the form.
+        </p>
+
+        <div class="contact-container">
+          
+          <!-- Contact methods -->
+          <div class="contact-methods">
+            
+            <a href="mailto:sidharth.backend@gmail.com" class="contact-method-card">
+              <span class="contact-method-icon"><i class="fas fa-envelope"></i></span>
+              <span class="contact-method-label">Email</span>
+              <span class="contact-method-value">sidharth.backend@gmail.com</span>
+            </a>
+
+            <a href="https://linkedin.com/in/sidharth-973" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+              <span class="contact-method-icon"><i class="fab fa-linkedin"></i></span>
+              <span class="contact-method-label">LinkedIn</span>
+              <span class="contact-method-value">in/sidharth-973</span>
+            </a>
+
+            <a href="https://github.com/sidharth971" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+              <span class="contact-method-icon"><i class="fab fa-github"></i></span>
+              <span class="contact-method-label">GitHub</span>
+              <span class="contact-method-value">github.com/sidharth971</span>
+            </a>
+
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contact-form" action="#">
+            
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="E.g., John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="E.g., john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+              Send Message &nbsp; <i class="fas fa-paper-plane"></i>
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; 2026 Sidharth Sahoo. All rights reserved.
+      </div>
+      
+      <div class="footer-links">
+        <a href="https://github.com/sidharth971" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sidharth-973" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:sidharth.backend@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" aria-label="Scroll back to top of the page">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Core Scripts -->
+  <script src="js/blog-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
