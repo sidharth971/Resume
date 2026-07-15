@@ -562,5 +562,94 @@ def test_invalid_payloads(invalid_data):
 - **Error Catch Rate**: Reached 95% query accuracy in preventing malformed database records.
 - **Regression Prevention**: Automated testing inside our CI/CD pipelines prevented developers from inadvertently introducing breaking API changes during hotfixes.
 `
+  },
+  {
+    id: 8,
+    title: "CKAD Core Concepts Recap: Kubernetes Architecture Explained",
+    date: "2026-07-15",
+    tags: ["Kubernetes", "CKAD", "DevOps", "Architecture"],
+    excerpt: "A practical recap of Kubernetes cluster architecture for CKAD prep — nodes, control plane components, and kubectl basics.",
+    content: `
+# CKAD Core Concepts Recap: Kubernetes Architecture Explained
+
+Before diving into workloads, config, and networking for the CKAD exam, it helps to have a solid mental model of what a Kubernetes cluster actually is and how its pieces fit together. This post walks through that foundation.
+
+---
+
+## 1. Nodes and Clusters
+
+A **node** is simply a machine (physical or virtual) capable of running containers. On its own, a single node is a single point of failure — if it goes down, everything running on it goes down with it.
+
+A **cluster** solves that by grouping multiple nodes together so that:
+- Workloads can be spread across machines instead of relying on one.
+- If a node fails, the containers it hosted can be rescheduled onto healthy nodes.
+- Load can be distributed based on available capacity rather than overloading a single machine.
+
+---
+
+## 2. The Control Plane (Master Node) Role
+
+One or more nodes in the cluster take on the **control plane** role. Their job isn't to run your application containers — it's to make decisions *about* the cluster:
+- Watching the health of every node and workload.
+- Deciding where new containers should be scheduled.
+- Reacting to failures by redistributing workloads to keep the desired state intact.
+
+Everything else — the machines actually running your application containers — are called **worker nodes**.
+
+---
+
+## 3. The Six Core Components
+
+Kubernetes' architecture is built from a small set of cooperating components, split between the control plane and the worker nodes:
+
+| Component | Runs on | Responsibility |
+|---|---|---|
+| **API Server** | Control plane | Front door for all cluster operations; every \`kubectl\` command and internal component talks to it |
+| **etcd** | Control plane | Consistent, distributed key-value store holding the entire cluster state |
+| **Controller Manager** | Control plane | Runs control loops that watch the current state and reconcile it toward the desired state |
+| **Scheduler** | Control plane | Decides which node a newly created Pod should run on, based on resource needs and constraints |
+| **Kubelet** | Worker node | Agent that ensures containers described in Pod specs are actually running on its node |
+| **Container Runtime** | Worker node | The engine (e.g. containerd, CRI-O) that actually pulls images and runs containers |
+
+A useful way to remember the split: the control plane holds the **brains and the memory** (API Server, etcd, Controller Manager, Scheduler), while worker nodes provide the **muscle** (Kubelet + container runtime) that executes the work.
+
+---
+
+## 4. How a Request Flows Through the Cluster
+
+1. You run a \`kubectl\` command, which talks to the **API Server**.
+2. The API Server validates the request and persists the desired state to **etcd**.
+3. The **Scheduler** notices an unscheduled Pod and assigns it to a suitable node.
+4. The **Kubelet** on that node sees the assignment and instructs the **container runtime** to pull the image and start the container.
+5. The **Controller Manager** continuously compares actual state to desired state and takes corrective action if they drift apart (e.g. restarting a crashed Pod).
+
+---
+
+## 5. Getting Started with kubectl
+
+\`kubectl\` is the CLI you'll use constantly, both on the exam and in real clusters. A few commands to have muscle memory for:
+
+\`\`\`bash
+# Check cluster and node status
+kubectl cluster-info
+kubectl get nodes
+
+# Launch a workload
+kubectl run nginx --image=nginx
+
+# Inspect what's running
+kubectl get pods
+kubectl describe pod nginx
+
+# View cluster-wide info across all namespaces
+kubectl get all --all-namespaces
+\`\`\`
+
+---
+
+## 6. Key Takeaway
+
+Almost every CKAD topic — Pods, Deployments, Services, ConfigMaps — is really just a different kind of object stored in etcd via the API Server, reconciled by controllers, and ultimately executed by a kubelet and container runtime on some worker node. Keeping this architecture picture in mind makes the rest of the exam material click much faster.
+`
   }
 ];
