@@ -1,0 +1,21 @@
+name: Myfirst workflow
+on:
+    push:
+        - master
+jobs:
+    first_job:
+        runs_on: ["ubuntu-latest"]
+        steps:
+            - name: checkout
+              uses: actions/checkout@v7
+            - name: see data
+              run: |
+                ls
+                echo ${{vars.REPO_OWNER}}--- ${{secrets.ACCESS_TOKEN}}
+    second-job:
+        runs_on: ["ubuntu-latest"]
+        needs:
+            - first_job
+        steps:
+            - name: see
+              run: pwd
