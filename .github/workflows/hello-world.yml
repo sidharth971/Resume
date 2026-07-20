@@ -1,10 +1,11 @@
 name: Myfirst workflow
 on:
     push:
-        - master
+        branches:
+            - master
 jobs:
     first_job:
-        runs_on: ["ubuntu-latest"]
+        runs-on: ubuntu-latest
         steps:
             - name: checkout
               uses: actions/checkout@v7
@@ -13,7 +14,7 @@ jobs:
                 ls
                 echo ${{vars.REPO_OWNER}}--- ${{secrets.ACCESS_TOKEN}}
     second-job:
-        runs_on: ["ubuntu-latest"]
+        runs-on: ubuntu-latest
         needs:
             - first_job
         steps:
