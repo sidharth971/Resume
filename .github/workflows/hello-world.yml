@@ -24,8 +24,8 @@ jobs:
                 os: [ubuntu-latest, ubuntu-20.04, windows-latest]
                 images: [hello-world, alpine]
                 exclude:
-                    os: windows-latest
-                    images: [hello-world, alpine]
+                    - os: windows-latest
+                     images: [hello-world, alpine]
         runs-on: ${{matrix.os}}
         steps:
             - name: checkout
