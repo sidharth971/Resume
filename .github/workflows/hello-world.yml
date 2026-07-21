@@ -1,8 +1,20 @@
 name: Myfirst workflow
 on:
-    push:
-        branches:
-            - master
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options: [info, warning, debug]
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        required: true
 jobs:
     first_job:
         runs-on: ubuntu-latest
@@ -20,3 +32,4 @@ jobs:
         steps:
             - name: see
               run: pwd
+
